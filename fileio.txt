@@ -1,0 +1,3 @@
+Hi!
+I am a file created to be used by php file read and write programs.
+Bye!

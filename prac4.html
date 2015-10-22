@@ -1,0 +1,29 @@
+<!-- browser redirection-->
+<html>
+<body>
+<?php
+	if(isset($_POST["location"])){
+		$location=$_POST["location"];
+		header("Location:$location");
+		exit();
+	}
+?>
+<h1><em>Choose the site to learn php from</em></h1>
+
+<form action="<?php $_PHP_SELF ?>" method="POST">
+<select name="location">
+<option value="http://www.w3school.com">W3School</option>
+<br>
+<option value="http://www.tutorialspoint.com">Tutorials Point</option>
+<br>
+<option value="http://www.udacity.com">UdaCity</option>
+<br>
+<option value="http://www.pluralsight.com">Plural Sight</option>
+<br>
+<br>
+<br>
+</select>
+<input type="submit">
+</form>
+</body>
+</html>

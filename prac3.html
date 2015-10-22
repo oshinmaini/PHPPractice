@@ -1,0 +1,33 @@
+<!-- forms-->
+
+<?php
+
+if(isset( $_POST["name"]) || isset($_POST["age"] ))
+{
+echo "Welcome ". $_POST['name']. "<br />";
+echo "You are ". $_POST['age']. " years old.";
+exit();
+}
+?>
+<html>
+<body>
+<br>
+<center><big><em>Personal Details</em></big></center>
+<form action="<?php $_PHP_SELF ?>" method="POST">
+<br>
+<br>
+<br>
+<br>
+<br>
+Name: <input type="text" name="name" />
+<br>
+<br>
+Age:<input type="text" name="age" />
+<br>
+<br>
+<br>
+
+<input type="submit" />
+</form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!--File read-->
+<html>
+<body>
+<?php
+$filepath="fileio.txt";
+$file= fopen($filepath,"r");
+if($file==false){
+echo "Sorry, but either the path is invalid or file doesn't exist!";
+exit();
+}
+else{
+$filesize=filesize($filepath);
+$filedata=fread($file,$filesize);
+fclose($file);
+
+echo "<H1>Contents of the file are</H1><br><br><br><br>$filedata";
+}
+?>
+</body>
+</html>
